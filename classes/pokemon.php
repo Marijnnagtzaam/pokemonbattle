@@ -9,11 +9,10 @@ abstract class Pokemon {
     private $weakness;
     private $resistance;
    
-    public function __construct($name, $energyType, $hitpoints, $health, $attacks, $weakness, $resistance)
+    public function __construct($name, $energyType, $health, $attacks, $weakness, $resistance)
     {
         $this->name = $name;
         $this->energyType = $energyType;
-        $this->hitpoints = $hitpoints; 
         $this->health = $health; 
         $this->attacks = $attacks;
         $this->weakness = $weakness; 
@@ -43,7 +42,7 @@ abstract class Pokemon {
     public function getHealth(){
         return $this->name . "'s health is " . $this->health;
     }
-    
+
     public function getAttack($attackName){
         return $this->attacks[$attackName];
     }
